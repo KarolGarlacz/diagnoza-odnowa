@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Bazowe dopasowanie typografii do mockupu */
+@layer base {
+  html {
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3 {
+    @apply font-display text-ink-900;
+  }
+  p, li, input, textarea, label, button {
+    @apply font-sans;
+  }
+}
+
+/* Delikatne tła fal jak w makiecie */
+.page-bg-top {
+  background-image: theme("backgroundImage.wave-top");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.page-bg-mid {
+  background-image: theme("backgroundImage.wave-mid");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.page-bg-bottom {
+  background-image: theme("backgroundImage.wave-bottom");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+/* Karty z pastelowym gradientem */
+.card-gradient {
+  background-image: theme("backgroundImage.card-gradient");
+  @apply shadow-card rounded-2xl border border-white/60;
+}
+
+/* Klasy UI 1:1 */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5
+    bg-sage-600 text-white font-medium shadow-soft hover:bg-sage-400 transition-colors;
+}
+.icon-pill {
+  @apply w-10 h-10 rounded-full flex items-center justify-center
+    bg-white shadow-soft border border-white/60;
+}
+.input-soft {
+  @apply w-full rounded-xl border border-white/60 bg-white/90
+    shadow-insetSoft px-4 py-3 text-ink-700 placeholder-ink-700/50;
+}
+/* Mini dopracowania wyglądu sekcji Cennik */
+#cennik .card-gradient .text-2xl {
+  letter-spacing: 0.2px;
+}
+
+/* Delikatne wyrównanie gwiazdek opinii */
+#opinie .rounded-2xl svg {
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.6));
+}
+/* Tabela cennika */
+.price-table thead th {
+  @apply text-sm font-medium text-ink-900 bg-white/70;
+  border-bottom: 1px solid rgba(30, 50, 38, 0.08);
+}
+.price-table tbody td {
+  @apply align-top;
+  border-top: 1px solid rgba(30, 50, 38, 0.06);
+}
+.table-row:hover td {
+  background: rgba(238, 245, 240, 0.35); /* delikatny sage highlight */
+}
+
+/* Mapa (responsywna wysokość) */
+.map-embed {
+  width: 100%;
+  height: 280px;
+}
+@media (min-width: 768px) {
+  .map-embed {
+    height: 360px;
+  }
+}
