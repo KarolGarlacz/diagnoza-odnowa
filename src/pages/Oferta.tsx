@@ -74,7 +74,7 @@ const Offer = () => {
   </h2>
 
   <p className="text-gray-800 leading-relaxed mb-4">
-    Diagnoza <span className="font-semibold text-green-700">ADHD</span> (zespołu nadpobudliwości psychoruchowej z deficytem uwagi) to wieloetapowy proces, którego celem jest rzetelna ocena funkcjonowania osoby w obszarze uwagi, impulsywności oraz poziomu aktywności. W naszym gabinecie opiera się ona na szczegółowym wywiadzie klinicznym oraz standaryzowanych kwestionariuszach <span className="font-semibold">Connersa</span>.
+    Diagnoza <span className="font-semibold text-green-700">ADHD</span> (zespołu nadpobudliwości psychoruchowej z deficytem uwagi) to wieloetapowy proces, którego celem jest rzetelna ocena funkcjonowania osoby w obszarze uwagi, impulsywności oraz poziomu aktywności. W naszym gabinecie opiera się ona na szczegółowym wywiadzie klinicznym oraz standaryzowanych kwestionariuszach <span className="font-semibold"> Connersa, Diva-5 oraz Young Diva-5</span>.
   </p>
 
   <p className="text-gray-800 leading-relaxed mb-6">
@@ -205,6 +205,7 @@ const Offer = () => {
   </h3>
   <ul className="list-disc list-inside text-gray-800 mb-6 space-y-1">
     <li>Psychoedukacja dotycząca rozwoju emocjonalnego dziecka,</li>
+    <li>Wsparcie dla rodziców w trakcie rozwodu i mediacji sądowych,</li>
     <li>Wsparcie w radzeniu sobie z trudnymi zachowaniami,</li>
     <li>Omówienie skutecznych strategii wychowawczych,</li>
     <li>Wzmocnienie kompetencji rodzicielskich,</li>

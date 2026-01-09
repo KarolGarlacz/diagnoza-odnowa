@@ -170,7 +170,7 @@ export default function Home(): JSX.Element {
     { service: "Konsultacja / zajęcia (indywidualne)", price: "140zł/50min" },
     { service: "Terapia pedagogiczna (zajęcia wyrównawcze, pedagog specjalny)", price: "120zł/50min" },
     { service: "Terapia ręki w praktyce pedagogiczno-terapeutycznej", price: "120zł/50min" },
-    { service: "Sporządzenie opinii/informacji o dziecku", price: "140zł" },
+    { service: "Sporządzenie opinii/informacji o dziecku", price: "2000zł" },
   ];
 
   const testimonials: Testimonial[] = [
