@@ -1,9 +1,9 @@
 
 import React from "react";
-import logo from "../assets/logo.png";
-import home from "../assets/home.png";
-import onas from "../assets/onas.png";
+import home from "../assets/home.jpg";
+import onas from "../assets/onas.jpg";
 import { Link } from "react-router-dom";
+import { FaBrain, FaClipboardCheck, FaHandHoldingMedical, FaPuzzlePiece } from "react-icons/fa";
 
 /* ========= Ikony (inline SVG, kolor przez currentColor) ========= */
 
@@ -15,32 +15,7 @@ const CheckIcon: React.FC = () => (
     />
   </svg>
 );
-const TalkIcon: React.FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="text-sage-600" aria-hidden="true">
-    <path fill="currentColor" d="M12 4a8 8 0 00-8 8 8 8 0 008 8h1l3 3v-3a8 8 0 004-7c0-4.42-3.58-8-8-8z" />
-  </svg>
-);
-const BookIcon: React.FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="text-sage-600" aria-hidden="true">
-    <path fill="currentColor" d="M6 4h9a3 3 0 013 3v12H6a3 3 0 01-3-3V7a3 3 0 013-3zm0 2a1 1 0 00-1 1v9a1 1 0 001 1h10V7a1 1 0 00-1-1H6z" />
-  </svg>
-);
-const BrainIcon: React.FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="text-sage-600" aria-hidden="true">
-    <path
-      fill="currentColor"
-      d="M12 3a4 4 0 00-4 4 3 3 0 00-3 3c0 .5.12.98.34 1.4A3.5 3.5 0 005 16a3.5 3.5 0 003.5 3.5H10a2.5 2.5 0 005 0h1.5A3.5 3.5 0 0020 16c0-1.05-.45-2-1.18-2.66.3-.42.48-.93.48-1.48a3 3 0 00-3-3A4 4 0 0012 3z"
-    />
-  </svg>
-);
-const PuzzleIcon: React.FC = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" className="text-sage-600" aria-hidden="true">
-    <path
-      fill="currentColor"
-      d="M20 13h-1a2 2 0 00-2 2v1h-2a2 2 0 010-4h2v-2a2 2 0 00-2-2h-1V6a2 2 0 10-4 0v2H8a2 2 0 00-2 2v2H5a2 2 0 000 4h1v1a2 2 0 002 2h2v1a2 2 0 104 0v-1h1a2 2 0 002-2v-1h1a2 2 0 000-4z"
-    />
-  </svg>
-);
+
 const StarIcon: React.FC<{ filled?: boolean }> = ({ filled = true }) => (
   <svg width="18" height="18" viewBox="0 0 24 24" className={filled ? "text-sage-600" : "text-sage-100"} aria-hidden="true">
     <path
@@ -121,9 +96,7 @@ const ContactBlock: React.FC<{
              
            📞 515 828 848
         </a>
-        <p className="text-xs text-ink-600 mt-1">
-          pn–pt 9:00–17:00
-        </p>
+        
         <a href="https://www.znanylekarz.pl/karolina-piekos/psycholog/krakow" target="_blank" rel="noopener noreferrer" className="btn-primary mt-2" > Umów wizytę </a>
       </div>
     </div>
@@ -170,7 +143,7 @@ export default function Home(): JSX.Element {
     { service: "Konsultacja / zajęcia (indywidualne)", price: "140zł/50min" },
     { service: "Terapia pedagogiczna (zajęcia wyrównawcze, pedagog specjalny)", price: "120zł/50min" },
     { service: "Terapia ręki w praktyce pedagogiczno-terapeutycznej", price: "120zł/50min" },
-    { service: "Sporządzenie opinii/informacji o dziecku", price: "2000zł" },
+    { service: "Sporządzenie opinii/informacji o dziecku", price: "200zł" },
   ];
 
   const testimonials: Testimonial[] = [
@@ -201,7 +174,7 @@ export default function Home(): JSX.Element {
             </div>
           </div>
 
-          <div className="rounded-3xl overflow-hidden shadow-soft border border-white/60">
+          <div className="rounded-3xl overflow-hidden shadow-soft border border-white/60 ">
             <img
               src={heroPlaceholder}
               alt="Scena konsultacji — sekcja Home"
@@ -251,7 +224,7 @@ export default function Home(): JSX.Element {
           <SectionHeading>Oferta diagnostyczna</SectionHeading>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="card-gradient p-5">
-              <div className="icon-pill mb-4"><PuzzleIcon /></div>
+              <div className="icon-pill mb-4"><FaBrain size={22} /></div>
               <h3 className="font-display text-xl font-bold">Diagnoza ADOS-2</h3>
               <p className="mt-2 text-sm">Badanie ADOS-2 polega na ustrukturyzowanej obserwacji zachowania osoby badanej w trakcie specjalnie dobranych zadań, zabaw i rozmów. Ich forma jest dostosowana do wieku, poziomu rozwoju oraz możliwości komunikacyjnych danej osoby — od małych dzieci po osoby dorosłe.</p>
               <br></br>
@@ -260,7 +233,7 @@ export default function Home(): JSX.Element {
               </Link>
             </div>
             <div className="card-gradient p-5">
-              <div className="icon-pill mb-4"><BrainIcon /></div>
+              <div className="icon-pill mb-4"><FaPuzzlePiece size={22} /></div>
               <h3 className="font-display text-xl font-bold">Diagnoza ADHD</h3>
               <p className="mt-2 text-sm">Diagnoza ADHD (zespołu nadpobudliwości psychoruchowej z deficytem uwagi) to wieloetapowy proces, którego celem jest rzetelna ocena funkcjonowania danej osoby w obszarze uwagi, impulsywności oraz poziomu aktywności.</p>
               <br></br>
@@ -269,7 +242,7 @@ export default function Home(): JSX.Element {
               </Link>
             </div>
             <div className="card-gradient p-5">
-              <div className="icon-pill mb-4"><TalkIcon /></div>
+              <div className="icon-pill mb-4"><FaHandHoldingMedical size={22} /></div>
               <h3 className="font-display text-xl font-bold">Konsultacje psychologiczne</h3>
               <p className="mt-2 text-sm">Konsultacje psychologiczne to spotkania, których celem jest zrozumienie zgłaszanych trudności, określenie potrzeb oraz zaplanowanie odpowiedniego wsparcia. W pracy z dziećmi i młodzieżą proces ten wymaga czasu i obserwacji, dlatego zazwyczaj obejmuje kilka spotkań.</p>
               <br></br>
@@ -278,7 +251,7 @@ export default function Home(): JSX.Element {
               </Link>
             </div>
             <div className="card-gradient p-5">
-              <div className="icon-pill mb-4"><BookIcon /></div>
+              <div className="icon-pill mb-4"><FaClipboardCheck size={22} /></div>
               <h3 className="font-display text-xl font-bold">Konsultacje pedagogiczne</h3>
               <p className="mt-2 text-sm">Celem konsultacji jest lepsze zrozumienie dziecka, pomoc w codziennych wyzwaniach oraz wzmocnienie kompetencji rodziców.</p>
               <br></br>

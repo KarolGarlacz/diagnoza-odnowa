@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaUserGraduate, FaBrain, FaHandHoldingMedical, FaClipboardCheck } from "react-icons/fa";
+import { FaBrain, FaHandHoldingMedical, FaClipboardCheck, FaPuzzlePiece } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Offer = () => {
@@ -7,7 +7,7 @@ const Offer = () => {
 
   const tabs = [
     { id: "diagnoza", label: "Diagnoza ADOS-2", icon: <FaBrain size={22} /> },
-    { id: "adhd", label: "Diagnoza ADHD", icon: <FaUserGraduate size={22} /> },
+    { id: "adhd", label: "Diagnoza ADHD", icon: <FaPuzzlePiece size={22} /> },
     { id: "psychologiczna", label: "Konsultacja psychologiczna", icon: <FaHandHoldingMedical size={22} /> },
     { id: "pedagogiczna", label: "Konsultacja pedagogiczna", icon: <FaClipboardCheck size={22} /> },
   ];
