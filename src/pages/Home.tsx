@@ -3,6 +3,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import home from "../assets/home.png";
 import onas from "../assets/onas.png";
+import { Link } from "react-router-dom";
 
 /* ========= Ikony (inline SVG, kolor przez currentColor) ========= */
 const CheckIcon: React.FC = () => (
@@ -82,7 +83,10 @@ const PriceTableSimple: React.FC<{ rows: PriceRow[] }> = ({ rows }) => (
       </tbody>
     </table>
     <div className="px-4 py-3 text-xs text-ink-700/70">
-      * Ostateczna cena diagnozy zależy od zakresu badań i zostanie potwierdzona po konsultacji wstępnej.
+      * W naszym gabinecie istnieje możliwość płatności: gotówką, kartą online, poprzez system znanylekarz.
+    </div>
+    <div className="px-4 py-3 text-xs text-ink-700/70">
+      ** Ostateczna cena diagnozy zależy od zakresu badań i zostanie potwierdzona po konsultacji wstępnej.
     </div>
   </div>
 );
@@ -119,6 +123,7 @@ const ContactBlock: React.FC<{
         <p className="text-xs text-ink-600 mt-1">
           pn–pt 9:00–17:00
         </p>
+        <a href="https://www.znanylekarz.pl/karolina-piekos/psycholog/krakow" target="_blank" rel="noopener noreferrer" className="btn-primary mt-2" > Umów wizytę </a>
       </div>
     </div>
 
@@ -150,17 +155,21 @@ const TestimonialCard: React.FC<Testimonial> = ({ name, text, rating = 5 }) => (
 );
 
 /* ========= Główny komponent ========= */
-export default function App(): JSX.Element {
+export default function Home(): JSX.Element {
   const year = new Date().getFullYear();
 
   const heroPlaceholder = home;
   const aboutPlaceholder = onas
 
   const priceRows: PriceRow[] = [
-    { service: "Konsultacja psychologiczna", price: "220 zł" },
-    { service: "Konsultacja pedagogiczna", price: "200 zł" },
+    { service: "Konsultacja psychologiczna - pierwsza wizyta", price: "350 zł" },
+    { service: "Konsultacja psychologiczna - każda kolejna", price: "300 zł" },
     { service: "Diagnoza ADHD", price: "od 1200 zł" },
-    { service: "Diagnoza ADOS-2", price: "od 1500 zł" },
+    { service: "Diagnoza ADOS-2", price: "1600 zł" },
+    { service: "Konsultacja / zajęcia (indywidualne)", price: "140zł/50min" },
+    { service: "Terapia pedagogiczna (zajęcia wyrównawcze, pedagog specjalny)", price: "120zł/50min" },
+    { service: "Terapia ręki w praktyce pedagogiczno-terapeutycznej", price: "120zł/50min" },
+    { service: "Sporządzenie opinii/informacji o dziecku", price: "140zł" },
   ];
 
   const testimonials: Testimonial[] = [
@@ -185,9 +194,9 @@ export default function App(): JSX.Element {
               Dla dzieci, młodzieży i dorosłych. Wspieramy rozwój, pomagamy zrozumieć i rzetelnie diagnozujemy w obszarze emocji, relacji i nauki.
             </p>
             <div className="mt-6">
-              <a href="/oferta" className="btn-primary">
+              <Link to="/oferta" className="btn-primary">
                 Poznaj ofertę
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -219,9 +228,9 @@ export default function App(): JSX.Element {
               ))}
             </ul>
             <div className="mt-6">
-              <a href="/zespol" className="btn-primary">
+              <Link to="/zespol" className="btn-primary">
                 Poznaj nasz zespół
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -245,36 +254,36 @@ export default function App(): JSX.Element {
               <h3 className="font-display text-xl font-bold">Diagnoza ADOS-2</h3>
               <p className="mt-2 text-sm">Badanie ADOS-2 polega na ustrukturyzowanej obserwacji zachowania osoby badanej w trakcie specjalnie dobranych zadań, zabaw i rozmów. Ich forma jest dostosowana do wieku, poziomu rozwoju oraz możliwości komunikacyjnych danej osoby — od małych dzieci po osoby dorosłe.</p>
               <br></br>
-              <a href="/ados" className="mt-2 text-sm">
+              <Link to="/" className="mt-2 text-sm">
                 czytaj dalej →
-              </a>
+              </Link>
             </div>
             <div className="card-gradient p-5">
               <div className="icon-pill mb-4"><BrainIcon /></div>
               <h3 className="font-display text-xl font-bold">Diagnoza ADHD</h3>
               <p className="mt-2 text-sm">Diagnoza ADHD (zespołu nadpobudliwości psychoruchowej z deficytem uwagi) to wieloetapowy proces, którego celem jest rzetelna ocena funkcjonowania danej osoby w obszarze uwagi, impulsywności oraz poziomu aktywności.</p>
               <br></br>
-              <a href="/adhd" className="mt-2 text-sm">
+              <Link to="/" className="mt-2 text-sm">
                 czytaj dalej →
-              </a>
+              </Link>
             </div>
             <div className="card-gradient p-5">
               <div className="icon-pill mb-4"><TalkIcon /></div>
               <h3 className="font-display text-xl font-bold">Konsultacje psychologiczne</h3>
               <p className="mt-2 text-sm">Konsultacje psychologiczne to spotkania, których celem jest zrozumienie zgłaszanych trudności, określenie potrzeb oraz zaplanowanie odpowiedniego wsparcia. W pracy z dziećmi i młodzieżą proces ten wymaga czasu i obserwacji, dlatego zazwyczaj obejmuje kilka spotkań.</p>
               <br></br>
-              <a href="/konsultacje-psychologiczne" className="mt-2 text-sm">
+              <Link to="/" className="mt-2 text-sm">
                 czytaj dalej →
-              </a>
+              </Link>
             </div>
             <div className="card-gradient p-5">
               <div className="icon-pill mb-4"><BookIcon /></div>
               <h3 className="font-display text-xl font-bold">Konsultacje pedagogiczne</h3>
               <p className="mt-2 text-sm">Celem konsultacji jest lepsze zrozumienie dziecka, pomoc w codziennych wyzwaniach oraz wzmocnienie kompetencji rodziców.</p>
               <br></br>
-              <a href="/konsultacje-pedagogiczne" className="mt-2 text-sm">
+              <Link to="/konsultacje-pedagogiczne" className="mt-2 text-sm">
                 czytaj dalej →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -292,7 +301,7 @@ export default function App(): JSX.Element {
             <div className="mt-6">
               <ContactBlock
                 addressLines={["os. Na Skarpie 36/1", "31-910 Kraków"]}
-                mapEmbedSrc="https://www.google.com/maps?q=ul.%36/1NaSkarpie%2024,%20Kraków&output=embed"
+                mapEmbedSrc="https://www.google.com/maps?q=os.%20Na%20Skarpie%2036/1,%20Kraków&output=embed"
               />
             </div>
           </div>
