@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { FaUserGraduate, FaBrain, FaHandHoldingMedical, FaClipboardCheck } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Offer = () => {
-  const [activeTab, setActiveTab] = useState("psycholog");
+  const [activeTab, setActiveTab] = useState("diagnoza");
 
   const tabs = [
     { id: "diagnoza", label: "Diagnoza ADOS-2", icon: <FaBrain size={22} /> },
@@ -371,6 +372,9 @@ const Offer = () => {
       <div className="mt-8 p-8 bg-white rounded-2xl shadow-lg border border-gray-100">
         {content[activeTab]}
       </div>
+       <Link to="/" className="btn-primary mt-6">
+          Powrót
+        </Link>
     </div>
   );
 };

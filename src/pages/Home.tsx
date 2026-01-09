@@ -6,6 +6,7 @@ import onas from "../assets/onas.png";
 import { Link } from "react-router-dom";
 
 /* ========= Ikony (inline SVG, kolor przez currentColor) ========= */
+
 const CheckIcon: React.FC = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" className="text-sage-600" aria-hidden="true">
     <path
@@ -254,7 +255,7 @@ export default function Home(): JSX.Element {
               <h3 className="font-display text-xl font-bold">Diagnoza ADOS-2</h3>
               <p className="mt-2 text-sm">Badanie ADOS-2 polega na ustrukturyzowanej obserwacji zachowania osoby badanej w trakcie specjalnie dobranych zadań, zabaw i rozmów. Ich forma jest dostosowana do wieku, poziomu rozwoju oraz możliwości komunikacyjnych danej osoby — od małych dzieci po osoby dorosłe.</p>
               <br></br>
-              <Link to="/" className="mt-2 text-sm">
+              <Link to="/oferta" className="mt-2 text-sm">
                 czytaj dalej →
               </Link>
             </div>
@@ -263,7 +264,7 @@ export default function Home(): JSX.Element {
               <h3 className="font-display text-xl font-bold">Diagnoza ADHD</h3>
               <p className="mt-2 text-sm">Diagnoza ADHD (zespołu nadpobudliwości psychoruchowej z deficytem uwagi) to wieloetapowy proces, którego celem jest rzetelna ocena funkcjonowania danej osoby w obszarze uwagi, impulsywności oraz poziomu aktywności.</p>
               <br></br>
-              <Link to="/" className="mt-2 text-sm">
+              <Link to="/oferta" className="mt-2 text-sm">
                 czytaj dalej →
               </Link>
             </div>
@@ -272,7 +273,7 @@ export default function Home(): JSX.Element {
               <h3 className="font-display text-xl font-bold">Konsultacje psychologiczne</h3>
               <p className="mt-2 text-sm">Konsultacje psychologiczne to spotkania, których celem jest zrozumienie zgłaszanych trudności, określenie potrzeb oraz zaplanowanie odpowiedniego wsparcia. W pracy z dziećmi i młodzieżą proces ten wymaga czasu i obserwacji, dlatego zazwyczaj obejmuje kilka spotkań.</p>
               <br></br>
-              <Link to="/" className="mt-2 text-sm">
+              <Link to="/oferta" className="mt-2 text-sm">
                 czytaj dalej →
               </Link>
             </div>
@@ -281,7 +282,7 @@ export default function Home(): JSX.Element {
               <h3 className="font-display text-xl font-bold">Konsultacje pedagogiczne</h3>
               <p className="mt-2 text-sm">Celem konsultacji jest lepsze zrozumienie dziecka, pomoc w codziennych wyzwaniach oraz wzmocnienie kompetencji rodziców.</p>
               <br></br>
-              <Link to="/konsultacje-pedagogiczne" className="mt-2 text-sm">
+              <Link to="/oferta" className="mt-2 text-sm">
                 czytaj dalej →
               </Link>
             </div>
@@ -290,7 +291,7 @@ export default function Home(): JSX.Element {
       </section>
 
       {/* ===== CENNIK + KONTAKT ===== */}
-      <section id="cennik-kontakt" className="page-bg-bottom">
+      <section id="cennik" className="page-bg-bottom">
         <div className="container max-w-6xl py-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <SectionHeading>Cennik</SectionHeading>
